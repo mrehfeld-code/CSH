@@ -11,7 +11,7 @@ cmake --build build
 sudo cmake install
 ```
 
-If everything gone well you can start the shell with:
+If everything went well you can start the shell with:
 ```bash
 CSH
 ```
