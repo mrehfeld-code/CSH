@@ -7,7 +7,7 @@ To download and install just run the following commands:
 git clone https://github.com/mrehfeld-code/CSH
 cd CSH
 git submodule update --init
-cd external-depencies/SDL_ttf
+cd external-dependencies/SDL_ttf
 git submodule update --init
 cmake -S . -B build
 cmake --build build
