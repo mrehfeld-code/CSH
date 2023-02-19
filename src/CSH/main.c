@@ -10,11 +10,14 @@
 int main(int argc, char* argv[]) {
 	char line_buffer[MAXIMUM_LINE_LENGTH];
 
-	while (!(str_equals(line_buffer, "exit") || str_equals(line_buffer, "quit"))) {
+	bool loop = true;
+	while (loop) {
 		printf(PROMPT_STRING);
 
 		fgets(line_buffer, MAXIMUM_LINE_LENGTH, stdin);
 		str_popback(line_buffer);
+
+		if (str_begins_with(line_buffer, "exit") || str_begins_with(line_buffer, "quit")) loop = false;
 	}
 
 	return 0;
