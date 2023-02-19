@@ -52,7 +52,7 @@ file(GLOB CSH-GUI_SOURCE_FILES "${PROJECT_SOURCE_DIR}/src/CSH-GUI/*.c")
 add_executable(CSH-GUI ${CSH-GUI_SOURCE_FILES})
 
 target_include_directories(CSH-GUI PUBLIC "external-dependencies/SDL/include")
-target_link_libraries(CSH-GUI PUBLIC SDL3)
+target_link_libraries(CSH-GUI PUBLIC SDL3-shared)
 
 target_include_directories(CSH-GUI PUBLIC "external-dependencies/SDL_ttf/include")
 target_link_libraries(CSH-GUI PUBLIC SDL3_ttf)

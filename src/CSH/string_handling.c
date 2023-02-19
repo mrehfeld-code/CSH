@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "typedefs.h"
+#include "../typedefs.h"
 #include "string_handling.h"
 
 /* Compares the actuall string content not the size. */

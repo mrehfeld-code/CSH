@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "typedefs.h"
+#include "../typedefs.h"
 #include "string_handling.h"
 
 #define MAXIMUM_LINE_LENGTH 2048
