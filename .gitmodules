@@ -1,0 +1,6 @@
+[submodule "external-dependencies/SDL"]
+	path = external-dependencies/SDL
+	url = https://github.com/libsdl-org/SDL
+[submodule "external-dependencies/SDL_ttf"]
+	path = external-dependencies/SDL_ttf
+	url = https://github.com/libsdl-org/SDL_ttf

@@ -45,8 +45,17 @@ if(MSVC)
 	set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 endif()
 
+add_subdirectory("external-dependencies/SDL")
+add_subdirectory("external-dependencies/SDL_ttf")
+
 file(GLOB CSH-GUI_SOURCE_FILES "${PROJECT_SOURCE_DIR}/src/CSH-GUI/*.c")
 add_executable(CSH-GUI ${CSH-GUI_SOURCE_FILES})
+
+target_include_directories(CSH-GUI PUBLIC "external-dependencies/SDL/include")
+target_link_libraries(CSH-GUI PUBLIC SDL3)
+
+target_include_directories(CSH-GUI PUBLIC "external-dependencies/SDL_ttf/include")
+target_link_libraries(CSH-GUI PUBLIC SDL3_ttf)
 
 if(MSVC)
 	set_target_properties(CSH-GUI PROPERTIES VS_DEBUGGER_WORKING_DIR ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
